@@ -1,0 +1,19 @@
+services:
+  ia:
+    build: .
+    container_name: ia_gpu
+
+    volumes:
+      - .:/app
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]
+
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+
+    tty: true
+    stdin_open: true

@@ -1,0 +1,41 @@
+# ========================
+# Dados pesados (dataset + modelos)
+# ========================
+data/lfw/
+data/models/
+
+# ========================
+# Resultados (cada um gera os seus)
+# ========================
+app/results/
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+
+# ========================
+# Jupyter
+# ========================
+.ipynb_checkpoints/
+
+# ========================
+# Sistema / IDE
+# ========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ========================
+# Docker (volumes de dados em runtime)
+# ========================
+*.log

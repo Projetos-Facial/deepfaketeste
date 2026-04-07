@@ -1,0 +1,8 @@
+services:
+  ia:
+    build: .
+    container_name: ia_cpu
+    volumes:
+      - .:/app
+    tty: true
+    stdin_open: true

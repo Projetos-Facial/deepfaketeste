@@ -1,0 +1,12 @@
+torch
+torchvision
+torchaudio
+transformers
+numpy
+pandas
+scikit-learn
+ultralytics
+opencv-python-headless
+matplotlib
+scipy
+gdown
