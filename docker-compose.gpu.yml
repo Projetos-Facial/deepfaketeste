@@ -1,7 +1,10 @@
 services:
   ia:
+    image: carolinavilela/deepfaketeste:v2.0
     build: .
     container_name: ia_gpu
+    runtime: nvidia
+    network_mode: host
 
     volumes:
       - .:/app
@@ -10,10 +13,13 @@ services:
       resources:
         reservations:
           devices:
-            - capabilities: [ gpu ]
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
 
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
 
     tty: true
     stdin_open: true
