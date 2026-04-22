@@ -5,6 +5,7 @@ data/lfw/
 data/models/
 data.zip
 facefusion/
+yolo8face_adaface/
 
 # ========================
 # Resultados (cada um gera os seus)
