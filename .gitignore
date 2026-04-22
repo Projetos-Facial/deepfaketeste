@@ -39,3 +39,9 @@ Thumbs.db
 # Docker (volumes de dados em runtime)
 # ========================
 *.log
+data/
+facefusion/
+results/
+*.mp4
+*.jpeg
+*.jpg
