@@ -3,7 +3,6 @@ services:
     image: carolinavilela/deepfaketeste:v2.0
     build: .
     container_name: ia_gpu
-    runtime: nvidia
     network_mode: host
 
     volumes:

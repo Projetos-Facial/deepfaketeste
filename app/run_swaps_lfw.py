@@ -44,8 +44,8 @@ SWAPS_DIR = "data/lfw/swaps"            # Pasta onde as imagens trocadas são sa
 RESULTS_DIR = "app/results"
 
 # Número de swaps a gerar (cada swap = 1 chamada ao FaceFusion)
-# 100 swaps para significância estatística adequada (IC 95% < ±10%)
-NUM_SWAPS = 100
+# 3000 swaps é o limite do protocolo LFW para máxima significância estatística
+NUM_SWAPS = 3000
 
 # Thresholds para avaliar (os mesmos do artigo/baseline)
 THRESHOLDS = [0.45, 0.60]

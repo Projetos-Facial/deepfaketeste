@@ -3,6 +3,8 @@
 # ========================
 data/lfw/
 data/models/
+data.zip
+facefusion/
 
 # ========================
 # Resultados (cada um gera os seus)

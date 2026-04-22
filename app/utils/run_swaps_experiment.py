@@ -23,11 +23,11 @@ def main():
     # Nomes dos arquivos de originais (quem empresta o rosto, quem empresta o corpo)
     # Você pode EDITAR essa lista sempre que quiser rodar com outras fotos que você jogar lá na pasta
     duos = [
-        ("pauloserioescuro.jpg", "joaoserio.jpg"),          # 1: Rosto do Paulo,  Corpo do Joao
-        ("lucasserioclaro.jpg", "carolserioclaro.jpg"),     # 2: Rosto do Lucas,  Corpo da Carol
-        ("carolserioescuro.jpg", "paulosorrindoclaro.jpg"), # 3: Rosto da Carol,  Corpo do Paulo
-        ("mateussorrindoclaro.jpg", "jonesserio.jpg"),      # 4: Rosto do Mateus, Corpo do Jones
-        ("mariasorrindoclaro.jpeg", "victorserioclaro.jpeg")# 5: Rosto da Maria,  Corpo do Victor
+        ("victorsorrindoclaro.jpeg", "paulistaserioescuro.jpg"), # 1: Rosto do Victor, Corpo do Paulista
+        ("jonessorrindo.jpg", "mateusserioescuro.JPG"),          # 2: Rosto do Jones, Corpo do Mateus
+        ("joaosorrindoescuro.jpg", "lucasserioescuro.jpg"),      # 3: Rosto do Joao, Corpo do Lucas
+        ("paulistaserioclaro.jpg", "mariaserioclaro.jpeg"),      # 4: Rosto do Paulista, Corpo da Maria
+        ("mariaserioescuro.jpeg", "carolserioclaro.jpg")         # 5: Rosto da Maria, Corpo da Carol
     ]
 
     print("\n🔧 Passo 1/3: Iniciando FaceFusion (Pode demorar alguns minutos para os Swaps)...")
@@ -107,6 +107,11 @@ def main():
         print("Neste teste criamos a fraude, e tentamos fazer o modelo aprovar como se fosse a pessoa real.")
         print(tabulate(df, headers='keys', tablefmt='fancy_grid', showindex=False))
         print("="*100 + "\n")
+        
+        # Salvando os resultados em CSV
+        csv_path = "data/dataset_pessoal/resultados_swaps.csv"
+        df.to_csv(csv_path, index=False)
+        print(f"📁 Os resultados formatados foram salvos no arquivo: {csv_path}")
     else:
         print("\nOs swaps não foram gerados. Você já instalou o FaceFusion? Rode: pip install -r facefusion/requirements.txt")
 

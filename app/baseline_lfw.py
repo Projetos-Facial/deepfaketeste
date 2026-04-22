@@ -69,7 +69,7 @@ def ensure_lfw_images():
     tgz_path = os.path.join(DATA_DIR, "lfw-funneled.tgz")
     lfw_home = os.path.join(DATA_DIR, "lfw_home")
     os.makedirs(lfw_home, exist_ok=True)
-    download_file("http://vis-www.cs.umass.edu/lfw/lfw-funneled.tgz", tgz_path)
+    download_file("https://web.archive.org/web/20230225141014if_/http://vis-www.cs.umass.edu/lfw/lfw-funneled.tgz", tgz_path)
     print("   Extraindo...")
     with tarfile.open(tgz_path, "r:gz") as tar:
         tar.extractall(path=lfw_home)
